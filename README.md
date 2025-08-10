@@ -1,11 +1,15 @@
+哥本哈根半日游地图 (Copenhagen Half-Day Tour Interactive Map)
+
 这是一个基于 Leaflet.js 构建的、功能丰富的交互式网页地图，旨在为哥本哈根的半日游提供清晰的路线和景点指引。
 This is a feature-rich interactive web map built with Leaflet.js, designed to provide clear routes and points of interest for a half-day tour in Copenhagen.
-简体中文版 (Simplified Chinese Version)
+
+
 
 您可以在这里访问在线演示版本：
 https://<您的GitHub用户名>.github.io/<您的仓库名称>/
 
 功能特性
+
 交互式地图: 使用 OpenStreetMap 作为底图，提供流畅的缩放和平移体验。
 自定义数据渲染: 加载并渲染本地的 copenhagen.geojson 文件，清晰区分不同类型的地理要素。
 丰富的符号系统:
@@ -28,6 +32,7 @@ JavaScript (ES6+)
 Leaflet.js v1.9.4
 Leaflet.locatecontrol (定位插件)
 Leaflet.Polyline.TextPath (文字沿线插件)
+
 项目结构
 code
 Code
@@ -37,6 +42,7 @@ Code
 ├── style.css           # 自定义样式 (可留空)
 ├── copenhagen.geojson  # 地图数据源
 └── README.md           # 项目说明文件
+
 安装与使用
 克隆或下载此仓库到本地。
 确保 copenhagen.geojson 文件与 index.html 在同一目录下。
@@ -57,10 +63,10 @@ description: 详细描述信息，在点击要素时于弹窗中显示。
 v1.0.0 (2025-08-10)
 
 English Version
-Live Demo
+
 You can access the live demo here:
 https://<YOUR_GITHUB_USERNAME>.github.io/<YOUR_REPOSITORY_NAME>/
-(Remember to replace <YOUR_GITHUB_USERNAME> and <YOUR_REPOSITORY_NAME> with your actual info.)
+
 Features
 Interactive Map: Utilizes OpenStreetMap as a base layer, providing a smooth zoom and pan experience.
 Custom Data Rendering: Loads and renders a local copenhagen.geojson file, clearly distinguishing different types of geographic features.
