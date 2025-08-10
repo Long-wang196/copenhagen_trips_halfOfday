@@ -116,14 +116,20 @@ fetch('copenhagen.geojson')
 const locateControl = L.control.locate({
     position: 'topleft',
     strings: { title: "显示我的位置" },
-    flyTo: true,
+    // *** FIX 2.1: 阻止页面加载时自动移动视角 ***
+    setView: false, // 将 flyTo 替换为 setView: false
+    // *** FIX 2.2: 开启设备方向（罗盘）功能 ***
+    showCompass: true,
+    keepCurrentZoomLevel: true, // 配合罗盘使用，避免缩放级别跳动
     pane: 'pointsPane',
-    showPopup: false // 不显示默认的成功弹窗
+    showPopup: false
 }).addTo(map);
 
-// *** FIX 3.2: 添加定位失败的错误处理 ***
+// *** FIX 2.1: 页面加载后立即在后台启动定位，但不会移动视图 ***
+locateControl.start(); 
+
+// *** 定位失败的错误处理 (保持不变) ***
 map.on('locationerror', function(e) {
-    // e.message 中包含了具体的错误信息
     alert("定位失败: " + e.message + "\n\n请检查您是否已授权浏览器获取位置信息，并确保您在 HTTPS 安全环境下访问本页面。");
 });
 
@@ -152,5 +158,6 @@ map.on('zoomend', updateVisibility);
 // 等待一小段时间让地图元素完全加载后再执行第一次，避免元素还未创建
 
 setTimeout(updateVisibility, 500); 
+
 
 
