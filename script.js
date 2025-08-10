@@ -2,7 +2,7 @@
 const map = L.map('map').setView([55.6928, 12.5992], 13);
 
 // *** FIX 3.1: 定义控制可见性的最小缩放级别 ***
-const minZoomLevel = 10; 
+const minZoomLevel = 5; 
 
 // 创建图层面板
 map.createPane('linesPane');
@@ -152,3 +152,4 @@ map.on('zoomend', updateVisibility);
 // 等待一小段时间让地图元素完全加载后再执行第一次，避免元素还未创建
 
 setTimeout(updateVisibility, 500); 
+
