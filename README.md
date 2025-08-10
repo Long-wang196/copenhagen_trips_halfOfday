@@ -5,8 +5,7 @@ This is a feature-rich interactive web map built with Leaflet.js, designed to pr
 
 
 
-您可以在这里访问在线演示版本：
-https://<您的GitHub用户名>.github.io/<您的仓库名称>/
+您可以在这里访问在线演示版本：https://long-wang196.github.io/copenhagen_trips_halfOfday/
 
 功能特性
 
@@ -65,7 +64,7 @@ v1.0.0 (2025-08-10)
 English Version
 
 You can access the live demo here:
-https://<YOUR_GITHUB_USERNAME>.github.io/<YOUR_REPOSITORY_NAME>/
+(https://long-wang196.github.io/copenhagen_trips_halfOfday/)
 
 Features
 Interactive Map: Utilizes OpenStreetMap as a base layer, providing a smooth zoom and pan experience.
