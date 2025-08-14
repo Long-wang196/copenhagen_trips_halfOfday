@@ -45,8 +45,7 @@ This is a feature-rich interactive web map built with Leaflet.js, designed to pr
 - Leaflet.Polyline.TextPath (文字沿线插件)
 
 ## 项目结构
-code
-Code
+'''text
 /
 ├── index.html          # HTML主文件
 ├── script.js           # 地图交互核心逻辑
