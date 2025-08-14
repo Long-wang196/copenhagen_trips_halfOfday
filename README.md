@@ -3,9 +3,7 @@
 这是一个基于 Leaflet.js 构建的、功能丰富的交互式网页地图，旨在为哥本哈根的半日游提供清晰的路线和景点指引。
 This is a feature-rich interactive web map built with Leaflet.js, designed to provide clear routes and points of interest for a half-day tour in Copenhagen.
 
-
-
-您可以在这里访问在线演示版本：https://long-wang196.github.io/copenhagen_trips_halfOfday/
+您可以在这里访问在线演示版本*：https://long-wang196.github.io/copenhagen_trips_halfOfday/
 
 功能特性
 
