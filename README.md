@@ -65,6 +65,7 @@
 
 ## 版本
 *   v1.0.0 (2025-08-10)
+*   v1.1.0 (2025-08-14)
 
 
 
@@ -136,3 +137,4 @@ The `properties` of features within `copenhagen.geojson` must adhere to the foll
 ## Versioning
 
 *   v1.0.0 (2025-08-10)
+*   v1.1.0 (2025-08-14)
