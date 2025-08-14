@@ -2,7 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MODIFIED: 优化移动端视口，防止页面缩放干扰地图操作 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>哥本哈根半日游地图</title>
 
     <!-- Leaflet 核心 CSS -->
@@ -15,38 +16,12 @@
 
     <!-- 您的自定义 CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- 自定义样式 -->
-    <style>
-        /* 标签的通用气泡样式 */
-        .my-labels {
-            /* *** FIX 3.1: 切换为更醒目的淡黄色背景 *** */
-            background-color: #FFFFE0; /* LightYellow */
-            border: 1px solid #BDB76B; /* DarkKhaki border */
-            border-radius: 4px;
-            padding: 3px 6px;
-            font-weight: bold;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-            white-space: nowrap;
-            cursor: pointer; /* 保持手型光标，提示可点击 */
-        }
-        /* 海上路线文字样式 (蓝色) */
-        .sea-route-label {
-            font-weight: bold;
-            font-size: 13px;
-            fill: #0000FF; 
-            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-        }
-        /* 步行路线文字样式 (红色) */
-        .walking-route-label {
-            font-weight: bold;
-            font-size: 12px;
-            fill: #FF0000; /* 正红色 */
-            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-        }
-    </style>
 </head>
 <body>
+    
+    <div class="info-container">
+        <div id="filter-controls"></div>
+    </div>
 
     <div id="map"></div>
 
