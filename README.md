@@ -40,10 +40,32 @@
 ├── style.css           # 自定义样式 (可留空)
 ├── copenhagen.geojson  # 地图数据源
 └── README.md           # 项目说明文件
-text```
+```
 
 ## 安装与使用
 
+*   克隆或下载此仓库到本地。
+*   确保 `copenhagen.geojson` 文件与 `index.html` 在同一目录下。
+*   由于浏览器的 CORS 安全策略，不能直接通过 `file://` 协议打开 `index.html` 文件来加载 GeoJSON 数据。您需要启动一个本地 Web 服务器。
+    *   如果您安装了 Python 3, 可以在项目根目录下运行:
+        ```bash
+        python -m http.server
+        ```
+    *   然后，在浏览器中访问 `http://localhost:8000`。
+*   将整个项目文件夹上传到 GitHub 仓库，并开启 GitHub Pages 功能，即可获得一个公开的 `https` 网址，该网址下所有功能（包括实时定位）均可正常使用。
+
+## 数据格式要求
+
+`copenhagen.geojson` 文件中的要素属性（`properties`）需要遵循以下格式以保证所有功能正常运行：
+
+*   `class`: 用于区分要素类型。"attractions" 表示景点, "walkingroutes" 表示步行路线。
+*   `name_zh`: 中文名称，用于标签和弹窗。
+*   `name_en`: 英文名称，用于标签和弹窗。
+*   `description`: 详细描述信息，在点击要素时于弹窗中显示。
+
+## 版本
+
+*   v1.0.0 (2025-08-10)
 
 # Copenhagen Half-Day Tour Map
 
@@ -87,3 +109,29 @@ This is a feature-rich interactive web map built with Leaflet.js, designed to pr
 ├── style.css           # Custom styles (can be empty)
 ├── copenhagen.geojson  # Map data source
 └── README.md           # Project documentation
+```
+
+## Setup and Usage
+
+*   Clone or download this repository to your local machine.
+*   Ensure the `copenhagen.geojson` file is in the same directory as `index.html`.
+*   Due to browser CORS policies, you cannot load the GeoJSON data by opening `index.html` directly via the `file://` protocol. You need to run a local web server.
+    *   If you have Python 3, you can run this command in the project's root directory:
+        ```bash
+        python -m http.server
+        ```
+    *   Then, open `http://localhost:8000` in your browser.
+*   For full functionality (including geolocation), upload the entire project folder to a GitHub repository and enable GitHub Pages. This will provide a public `https` URL where all features work correctly.
+
+## Data Requirements
+
+The `properties` of features within `copenhagen.geojson` must adhere to the following format for all functionalities to work as intended:
+
+*   `class`: Distinguishes feature types. Key values are "attractions" and "walkingroutes".
+*   `name_zh`: The Chinese name, used for labels and popups.
+*   `name_en`: The English name, used for labels and popups.
+*   `description`: Detailed information displayed in the popup upon clicking a feature.
+
+## Versioning
+
+*   v1.0.0 (2025-08-10)
