@@ -64,10 +64,11 @@
 *   `description`: 详细描述信息，在点击要素时于弹窗中显示。
 
 ## 版本
-
 *   v1.0.0 (2025-08-10)
 
-# Copenhagen Half-Day Tour Map
+
+
+# Copenhagen Half-Day Tour Map （English version）
 
 This is a feature-rich interactive web map built with Leaflet.js, designed to provide clear routes and points of interest for a half-day tour in Copenhagen.
 
